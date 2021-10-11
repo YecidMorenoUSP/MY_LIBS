@@ -81,4 +81,11 @@ namespace SHM{
             return SHM_NO_ERROR;
         }
 
+        static int closeSHM(SHM_Object * shmData){
+            UnmapViewOfFile(shmData->pBuf);
+            CloseHandle(shmData->hMapFile);
+            return SHM_NO_ERROR;
+        }
+
+
     }

@@ -56,6 +56,7 @@ namespace SHM{
     static int getSHM(SHM_Object * shmData);
     static int createSHM(SHM_Object * shmData);
     static int openSHM(SHM_Object * shmData);
+    static int closeSHM(SHM_Object * shmData);
 
 }
 

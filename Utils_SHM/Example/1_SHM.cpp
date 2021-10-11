@@ -62,8 +62,7 @@ int main()
 
    // _getch();
 
-   UnmapViewOfFile(shmData.pBuf);
-   CloseHandle(shmData.hMapFile);
+    SHM::closeSHM(&shmData);
 
    return 0;
 }
