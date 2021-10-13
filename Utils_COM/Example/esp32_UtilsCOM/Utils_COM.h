@@ -1,5 +1,20 @@
 #pragma once
 
+/*
+    UtilsCOM.h para propositos generales
+    
+    #define DEBUG_COM -> Para mostras los logs en la consola
+
+    By Yecid Moreno : 2021
+    git: https://github.com/YecidMorenoUSP
+
+    Verifique que los bufer satisfacen el tamanho de acuerdo a base 2, 2^n
+
+    Requerimientos:
+        1. [X]
+*/
+
+
 #define COM_BEGIN_TX "[BEGIN]\0"
 #define COM_ALIVE_TX "[ALIVE]\0"
 #define COM_END_TX   "[END]\0"
@@ -86,7 +101,5 @@ static void ReadBytesSync(T  _buffer,P _size){
     while (Serial.available() < _size);
     Serial.readBytes((uint8_t*)_buffer, _size);
 }
-
-
 
 };

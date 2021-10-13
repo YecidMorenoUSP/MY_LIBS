@@ -43,7 +43,7 @@ namespace COM{
 
         char portName [20] = "COM15";
 
-        char * buffRec = new char[COM_BUF_SIZE];
+        char * buffRec  = new char[COM_BUF_SIZE];
         char * buffSend = new char[COM_BUF_SIZE];
     
         void * handler;
@@ -58,10 +58,10 @@ namespace COM{
 
     }COM_Object;
 
-    static int openCOM(COM_Object * comData);
+    static int openCOM(COM_Object  * comData);
     static int closeCOM(COM_Object * comData);
-    static int sendCOM(COM_Object * comData);
-    static int recvCOM(COM_Object * comData);
+    static int sendCOM(COM_Object  * comData);
+    static int recvCOM(COM_Object  * comData);
 
 };
 
