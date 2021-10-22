@@ -9,5 +9,6 @@ enum TypeBlock_{
 	BLKType_EXO3,
 	BLKType_EXO4,
 	BLKType_YECID,
+	BLKType_BLOCK_TEST,
 	BLKType_COUNT, //<ADD_BLOCK_ENUM>
 };

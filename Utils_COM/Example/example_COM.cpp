@@ -1,18 +1,13 @@
-
-#define DEBUG_COM
-#include "../Utils_COM.h"
-
 #include <iostream>
-
 #include <time.h>
+
+// #define DEBUG_COM
+#include "../Utils_COM.h"
 
 
 typedef struct{
-    char A[2];
-    char B[2];
-    int  TimeGlobal;
-    int  Time;
-    int index;
+    float S1;
+    float S2;
 }ToRec;
 
 typedef struct{
@@ -21,58 +16,52 @@ typedef struct{
 
 int main(){
 
-    COM::COM_Object comData;
+    for(int KK = 0 ; KK < 2 ; KK ++){
 
-    comData.buffRec_SIZE  = sizeof(ToRec);
-    comData.buffSend_SIZE = sizeof(ToSend);
+    COM * esp32 = new COM();
 
-    comData.Parameter.BaudRate = 1000000;
-    comData.Parameter.ByteSize = 8;
-    comData.Parameter.StopBits = ONESTOPBIT;
-    comData.Parameter.Parity = NOPARITY;
-    comData.Parameter.fDtrControl = DTR_CONTROL_ENABLE;
-
-    sprintf(comData.portName,"\\\\.\\COM15");
-
-    ToSend * toSend = (ToSend *) comData.buffSend;
-    ToRec  * toRec  = (ToRec  *) comData.buffRec;
-
-
-    COM::openCOM(&comData);
+    esp32->LOCAL.buffRec_SIZE  = sizeof(ToRec);
+    esp32->LOCAL.buffSend_SIZE = sizeof(ToSend);
+    esp32->LOCAL.Parameter.BaudRate = 1000000;
+    esp32->LOCAL.Parameter.ByteSize = 8;
+    esp32->LOCAL.Parameter.StopBits = ONESTOPBIT;
+    esp32->LOCAL.Parameter.Parity = NOPARITY;
+    esp32->LOCAL.Parameter.fDtrControl = DTR_CONTROL_ENABLE;
     
-    
+    sprintf(esp32->LOCAL.portName,"\\\\.\\COM15");
+
+    ToSend * toSend = (ToSend *) esp32->LOCAL.buffSend;
+    ToRec  * toRec  = (ToRec  *) esp32->LOCAL.buffRec;
+
+
+    esp32->openCOM();
+
     sprintf(toSend->type,COM_BEGIN_TX);
-    COM::sendCOM(&comData);
+    esp32->sendCOM();
+
+    esp32->runLoop();
 
     clock_t start = clock();
+    
+    double elapsed;
 
-    for (size_t i = 0; i < 1000; i++)
-    {
-        if(i%80 == 0){
-            sprintf(toSend->type,COM_ALIVE_TX);
-            COM::sendCOM(&comData);
-        }
-        
-        COM::recvCOM(&comData);
-        // printf("\nVal : %s",toRec->A);
-        // printf("\nVal : %s",toRec->B);
-        printf("\nTime  : %d",toRec->Time);
-        printf("\nTimeG : %d",toRec->TimeGlobal);
-        printf("\nindex : %d",toRec->index);
+    while ( elapsed = (double(clock() - start) / CLOCKS_PER_SEC ) < 2) {
+        Sleep(10);
+        printf("\nS1  : %f",toRec->S1);
+        printf("\nS2  : %f",toRec->S2);
     }
-
-    clock_t stop = clock();
-
-    double elapsed = double(stop - start) / CLOCKS_PER_SEC;
+    
+    elapsed = double(clock() - start) / CLOCKS_PER_SEC;
 
     sprintf(toSend->type,COM_END_TX);
-    COM::sendCOM(&comData);
+    esp32->sendCOM();   
 
-    COM::closeCOM(&comData);
-
+    esp32->closeCOM();
+    
+    
     printf("\n\nEllapsep time %f",elapsed);
+    Sleep(1000);
 
-    Sleep(4000);
-
+    }
     return 0;
 }

@@ -94,7 +94,7 @@ int ClientTCP::tryConnect(){
 void ClientTCP::loopServer(){
     int iResult;
     int iSendResult;
-
+    // iSendResult = send( LOCAL.ConnectSocket, LOCAL.sendbuf, LOCAL.sendbuflen, 0 );
     do {
         iResult = recv(LOCAL.ConnectSocket, LOCAL.recvbuf, LOCAL.recvbuflen, 0);
         if ( iResult > 0 ){ 
