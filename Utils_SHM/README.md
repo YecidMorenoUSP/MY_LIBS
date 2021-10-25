@@ -27,7 +27,6 @@
 4. *Abrir, o crear el bloque de memoria compartida*: De acuerdo al tipo de requerimientos puede usar 3 tipos de obtener una memoria compartida, puede crearlo, en el caso que requiera tener una secuencia o flujo de programa, y despues abrir ese bloque creado en otra aplicacion, com es segundo comando, o si no es importante un flujo de trabajo, puede usar la opcion 3, que abre o crea si es necesario, lo importante es obtener la memoria compartida.
 
     ```c++
-
     // Crear un bloque de memoria compartida.
     if((error = SHM::createSHM(&shmData)) != SHM::SHM_NO_ERROR){
       printf("Error : %d",error);
@@ -66,6 +65,9 @@
     ```PS
     g++ main.cpp -o main.exe -I "${DEV2}/MY_LIBS/Utils_SHM" -D DEBUG_SHM
     ```
+
+### Errors
+Cuando ocurre un error al llamar algun método del objeto SHM, retornará un valor, que indica cual fue el estado de esa ejecucion.
 
 |Name                  | Value       | Info
 |----                  | ----        |  ----
