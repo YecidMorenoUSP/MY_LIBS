@@ -40,6 +40,8 @@ int main()
 {  
    // int x = !((SHM::SHM_ERROR_CREATE & 0x01000000)^0x01000000);
    
+   printf("Size Of SharesBuffer : %d\n\n",sizeof(SharedBuffer));
+
    SHM::SHM_Object shmData;
    shmData.BUF_SIZE = sizeof(SharedBuffer);
    shmData.KEY_NAME =  (char*)"testSHM3";
@@ -54,7 +56,7 @@ int main()
    int index = sharedBuffer->A;
    printf("\n>> Su indice es : %d\n",index);
 
-   for(int i = 0 ; i < 10 ; i++){
+   for(int i = 0 ; i < 10000 ; i++){
       sharedBuffer->A += 1;
       sharedBuffer->print();
       Sleep(1000 + index*10);
