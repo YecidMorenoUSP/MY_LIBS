@@ -1,0 +1,16 @@
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\exampleTCP_RV.exe
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\exampleTCP_RV.deps.json
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\exampleTCP_RV.runtimeconfig.json
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\exampleTCP_RV.runtimeconfig.dev.json
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\exampleTCP_RV.dll
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\ref\exampleTCP_RV.dll
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\bin\Debug\net5.0\exampleTCP_RV.pdb
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.csproj.AssemblyReference.cache
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.AssemblyInfoInputs.cache
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.AssemblyInfo.cs
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.csproj.CoreCompileInputs.cache
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.dll
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\ref\exampleTCP_RV.dll
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.pdb
+C:\DEV2\MY_LIBS\Utils_TCP\Example\C#\exampleTCP_RV\obj\Debug\net5.0\exampleTCP_RV.genruntimeconfig.cache
