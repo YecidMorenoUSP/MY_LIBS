@@ -91,7 +91,7 @@ int ServerTCP::acceptClient(){
     closesocket(LOCAL.ListenSocket);
     
     #if defined(SERVER_TCP_SEND_FIRST)
-        send( LOCAL.ClientSocket, "OI\0\n", sizeof("OI\0\n"), 0 );
+        send( LOCAL.ClientSocket, "OIS\n", sizeof("OIS\n"), 0 );
     #endif
 
     return 0;
