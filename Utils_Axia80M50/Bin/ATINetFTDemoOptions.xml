@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_211" class="java.beans.XMLDecoder">
+ <object class="netftsample.NetFTOptions">
+  <void property="historyDuration">
+   <int>10</int>
+  </void>
+  <void property="lastIPAddress">
+   <string>192.168.1.1</string>
+  </void>
+  <void property="showHistoryView">
+   <boolean>true</boolean>
+  </void>
+ </object>
+</java>

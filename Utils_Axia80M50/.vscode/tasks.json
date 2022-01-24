@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe arquivo de build ativo",
+			"command": "C:\\TDM-GCC-64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"Utils_Axia80M50.cpp",
+				"-o",
+				"Utils_Axia80M50.exe",
+				"-l","ws2_32",
+
+				"-I",   "C:\\DEV2\\LIB\\ImGuiDocking\\examples",
+				"-I",   "C:\\DEV2\\LIB\\ImGuiDocking\\backends",
+				"-I",   "C:\\DEV2\\LIB\\ImGuiDocking",
+				"-I",   "C:\\DEV2\\LIB\\SDL2\\include\\SDL2",
+				"-I",	"C:\\DEV2\\LIB\\ImGuiDocking\\examples\\libs\\glfw\\include",
+
+				"-L",     "C:\\DEV2\\LIB\\SDL2\\lib",
+				
+				"-l",     "SDL2",
+				"-l",     "SDL2main",
+				"-l",     "opengl32",
+				"-l",     "gdi32",
+				"-l",     "shell32",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: C:\\TDM-GCC-64\\bin\\g++.exe"
+		}
+	]
+}
